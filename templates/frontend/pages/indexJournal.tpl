@@ -43,11 +43,11 @@
                                     </h4>
                                     <p class="card-text">
                                         {foreach from=$article->getAuthors() key=k item=author}
-                                            <span>{$author->getLastName()|strip|escape:"html"}
+                                            <span>{$author->getLocalizedLastName()|strip|escape:"html"}
                                                 {if $k<($article->getAuthors()|@count - 1)}
-                                                    {$author->getFirstName()|regex_replace:"/(?<=\w)\w+/":".,"}
+                                                    {$author->getLocalizedFirstName()|regex_replace:"/(?<=\w)\w+/":".,"}
                                                 {else}
-                                                    {$author->getFirstName()|regex_replace:"/(?<=\w)\w+/":"."}
+                                                    {$author->getLocalizedFirstName()|regex_replace:"/(?<=\w)\w+/":"."}
                                                 {/if}</span>
                                         {/foreach}
                                     </p>

@@ -47,11 +47,11 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade" id="nav-references" role="tabpanel" aria-labelledby="nav-references-tab">
                 {* References *}
-                {if $article->getCitations()}
+                {if $article->getLocalizedCitations()}
                     <div class="references">
                         <div class="value">
-                            {if $article->getCitations()}
-                                {$article->getCitations()|nl2br}
+                            {if $article->getLocalizedCitations()}
+                                {$article->getLocalizedCitations()|nl2br}
                             {/if}
                         </div>
                     </div>
